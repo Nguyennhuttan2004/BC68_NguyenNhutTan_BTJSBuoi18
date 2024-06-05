@@ -132,4 +132,58 @@ document.getElementById("btnSwapElement").onclick = function (){
 
 // bài 7
 
+//bài 8
+// hàm kiểm tra số nguyên tố
+function isPrime(num) {
+  if (num <= 1) return false;
+  if (num <= 3) return true;
 
+  if (num % 2 === 0 || num % 3 === 0) return false;
+
+  for (let i = 5; i * i <= num; i += 6) {
+      if (num % i === 0 || num % (i + 2) === 0) return false;
+  }
+
+  return true;
+}
+function findFirstPrime() {
+  for (let i = 0; i < arrNumber.length; i++) {
+      if (isPrime(Number(arrNumber[i]))) {
+          return arrNumber[i];
+      }
+  }
+  return -1; // Không tìm thấy số nguyên tố nào
+}
+function findFirstPrimeInInputArray() {
+  const inputArray = document.getElementById('numberInput').value* 1;
+  const firstPrime = findFirstPrime(inputArray);
+  let theP = document.createElement("p");
+  theP.innerHTML = `Số nguyên tố đầu tiên trong mảng là: ${firstPrime} `;
+ 
+  document.getElementById("bai8").appendChild(theP);
+}
+
+// bài 9
+
+function isInteger(num) {
+  return Number.isInteger(num);
+}
+
+// Hàm tìm số lượng số nguyên trong mảng
+function countIntegers() {
+  let count = 0;
+  for (let i = 0; i < arrNumber.length; i++) {
+      if (isInteger(arrNumber[i])) {
+          count++;
+      }
+  }
+  return count;
+}
+function findIntegersInInputArray() {
+  const inputArray = document.getElementById('numberInput').value*1;
+  const integerCount = countIntegers(inputArray);
+  let theP = document.createElement("p");
+  theP.innerHTML = `Số nguyên là: ${integerCount} `;
+ 
+  document.getElementById("bai9").appendChild(theP);
+}

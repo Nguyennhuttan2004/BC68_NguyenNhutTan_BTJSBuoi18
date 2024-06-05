@@ -138,25 +138,31 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                            Accordion Item #8
+                            Tìm số nguyên tố đầu tiên
                           </button>
                         </h2>
                         <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                            <button  class="btn" id="btnFindFirstPrimeNum" onclick="findFirstPrimeInInputArray()">Click me ^^</button>
+                            <div class="bai" id="bai8"></div>
                           </div>
                         </div>
                     </div>
                     <div class="accordion-item">
                         <h2 class="accordion-header">
                           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
-                            Accordion Item #9
+                              Đếm số nguyên
                           </button>
                         </h2>
                         <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                           <div class="accordion-body">
-                            <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
-                          </div>
+                            <div class="input-section">
+                              <input type="number" id="numberInput" placeholder="Nhập số">
+                              <button id="btnNumber">Thêm số</button>
+                          </div>  
+                          <button id="btnDemSoNguyen" onclick="findIntegersInInputArray()">đếm số nguyên</button>
+                          <div class="bai" id="bai9"></div>    
+                                            </div>
                         </div>
                     </div>
                     <div class="accordion-item">
