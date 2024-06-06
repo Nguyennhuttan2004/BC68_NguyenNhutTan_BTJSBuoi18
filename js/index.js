@@ -131,7 +131,16 @@ document.getElementById("btnSwapElement").onclick = function (){
 }
 
 // bài 7
-
+document.getElementById("btnCompareNum").onclick = function (){
+   
+  
+  arrNumber.sort((a,b)=>{
+    return a- b;
+  });
+let theP = document.createElement("p");
+theP.innerHTML = `Mảng đã được sắp xếp ${arrNumber} `;
+document.getElementById("bai7").appendChild(theP);
+}
 //bài 8
 // hàm kiểm tra số nguyên tố
 function isPrime(num) {
@@ -187,3 +196,39 @@ function findIntegersInInputArray() {
  
   document.getElementById("bai9").appendChild(theP);
 }
+
+
+// bai10
+
+document.querySelector("#btnSoSanh").addEventListener("click",function()  {
+            
+  let inputNum = document.querySelector("#numberInput").value *1;
+  console.log(inputNum);
+
+let positiveCount = 0;
+let negativeCount = 0;
+
+arrNumber.forEach(number => {
+    if (number > 0) {
+        positiveCount++;
+    } else if (number < 0) {
+        negativeCount++;
+    }
+});
+let theP = document.createElement("p");
+
+if (positiveCount > negativeCount) {
+  theP.innerHTML = "Số lượng số dương nhiều hơn số lượng số âm.";
+
+} else if (negativeCount > positiveCount) {
+  theP.innerHTML = "Số lượng số dương  hơn nhỏ số lượng số âm.";
+
+} else {
+  theP.innerHTML = "Số lượng số dương bằng với số lượng số âm.";
+
+}
+theP.innerHTML = `Số lượng số dương: ${positiveCount}`;
+theP.innerHTML =`Số lượng số âm: ${negativeCount}`;
+ 
+  document.getElementById("bai10").appendChild(theP);
+})
